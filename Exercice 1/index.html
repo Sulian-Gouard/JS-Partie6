@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exercice 1</title>
+</head>
+
+
+<body>
+    <d id="MyYear"></d>
+
+
+    <script>
+        let text = '';
+        let year;
+
+        for (year = 2020; year <= 2030; year++) {
+
+            if ((year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0))) {
+                text += "<p style=color:red;>" + year + "</p>";
+            } 
+            else {
+                text += "<p>" + year + "</p>";
+            }
+
+            document.getElementById('MyYear').innerHTML = text;
+
+        }
+    </script>
+
+
+</body>
+
+</html>
